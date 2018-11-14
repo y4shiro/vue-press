@@ -16,5 +16,3 @@ git commit -m "[ci skip] Deploy by CI"
 git push -f $(git config --get remote.origin.url) master:master > /dev/null 2>&1
 
 echo "Deploy a site!"
-
-cd -
