@@ -6,8 +6,8 @@
   "author": "y4shiro <y4shironao@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev":"vuepress dev",
-    "build":"vuepress build"
+    "dev":"vuepress dev docs",
+    "build":"vuepress build docs"
   },
   "dependencies": {
     "vuepress": "^0.14.5"
