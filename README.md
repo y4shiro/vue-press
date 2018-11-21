@@ -9,21 +9,25 @@
 
 # VuePress インストール
 VuePress 公式ドキュメントよると、  
-- [グローバルにインストールする方法](https://vuepress.vuejs.org/guide/getting-started.html#global-installation)
-- [既存プロジェクトにインストールする方法](https://vuepress.vuejs.org/guide/getting-started.html#inside-an-existing-project)
+- [グローバルにインストールする方法](https://vuepress.vuejs.org/guide/getting-started.html#global-installation)  
+- [既存プロジェクトにインストールする方法](https://vuepress.vuejs.org/guide/getting-started.html#inside-an-existing-project)  
 の2通りの方法が用意されている。  
   
 今回は `$ yarn init` でプロジェクトを作成し VuePress を導入する。  
 
+## vue-press ディレクトリ作成し移動する  
 ```
-# vue-press ディレクトリ作成し移動する
 $ mkdir vue-press
 $ cd vue-press
+```
 
-# Git リポジトリを作成
+## Git リポジトリを作成  
+```
 $ git init
+```
 
-# npm プロジェクトを新規作成
+# npm プロジェクトを新規作成  
+```
 $ yarn init
 yarn init
 yarn init v1.12.1
@@ -37,6 +41,4 @@ question license (MIT):
 question private:
 success Saved package.json
 ✨  Done in 8.99s.
-
-#
 ```
