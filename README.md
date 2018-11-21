@@ -15,14 +15,13 @@ VuePress 公式ドキュメントよると、
   
 今回は `$ yarn init` でプロジェクトを作成し VuePress を導入する。  
 
-## vue-press ディレクトリ作成し移動する  
+## Git リポジトリを作成  
+GitHub でリポジトリを作成して `$ git clone`  
+  
+ローカルで作成する場合は  
 ```
 $ mkdir vue-press
 $ cd vue-press
-```
-
-## Git リポジトリを作成  
-```
 $ git init
 ```
 
