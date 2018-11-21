@@ -113,7 +113,6 @@ module.exports = {
 }
 ```
 
-
 # GitHub Pages の公開  
 ## docs/ 公開  
 GitHub Pages を公開するには、GitHub リポジトリの `Settings > GitHub Pages` にて設定します。  
@@ -128,3 +127,11 @@ GitHub Pages を公開するには、GitHub リポジトリの `Settings > GitHu
 - https://y4shiro.github.io/vue-press/  
 
 # Circle CI でビルド、デプロイ  
+手動で build, commit, push をするのは手間がかかるので自動化します。  
+事前に Circle CI のアカウントを取得しておきます。  
+
+## Circle CI と GitHub リポジトリの連携  
+## `.circleci/config.yml` の作成  
+## Circle CI からのデプロイ用 Shell 作成  
+## GitHub リポジトリに push して動くことを確認  
+
