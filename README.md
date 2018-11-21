@@ -36,7 +36,7 @@ question version (1.0.0):
 question description:
 question entry point (index.js):
 question repository url:
-question author (y4shiro <yamashiro_naoki@ca-adv.co.jp>):
+question author (y4shiro <y4shironao@gmail.com>):
 question license (MIT):
 question private:
 success Saved package.json
