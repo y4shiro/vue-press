@@ -1,5 +1,8 @@
-# VuePress 導入
-最終的に Circle CI でデプロイまで行う  
+# VuePress で静的ページを作成し、GitHub Pages に公開する  
+- VuePress 環境構築  
+- GitHub Pages の公開  
+- Circle CI でビルド/デプロイ  
+までを行う  
 
 # 開発環境
 - OS: macOS Sierra  
@@ -7,7 +10,7 @@
 - npm: 6.4.1  
 - yarn: 1.12.1  
 
-# 環境構築
+# VuePress 環境構築
 VuePress 公式ドキュメントよると、  
 - [グローバルにインストールする方法](https://vuepress.vuejs.org/guide/getting-started.html#global-installation)  
 - [既存プロジェクトにインストールする方法](https://vuepress.vuejs.org/guide/getting-started.html#inside-an-existing-project)  
@@ -109,7 +112,7 @@ module.exports = {
 ```
 
 
-# GitHub Pages で公開  
+# GitHub Pages の公開  
 ## docs/ 公開  
 
-# Circle CI で自動ビルド、デプロイ  
+# Circle CI でビルド、デプロイ  
