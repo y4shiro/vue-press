@@ -2,15 +2,16 @@
 - VuePress 環境構築  
 - GitHub Pages の公開  
 - Circle CI でビルド/デプロイ  
+
 までを行う  
 
-# 開発環境
+# 開発環境  
 - OS: macOS Sierra  
 - Node.js: v10.13.0  
 - npm: 6.4.1  
 - yarn: 1.12.1  
 
-# VuePress 環境構築
+# VuePress 環境構築  
 VuePress 公式ドキュメントよると、  
 - [グローバルにインストールする方法](https://vuepress.vuejs.org/guide/getting-started.html#global-installation)  
 - [既存プロジェクトにインストールする方法](https://vuepress.vuejs.org/guide/getting-started.html#inside-an-existing-project)  
@@ -79,7 +80,7 @@ $ yarn docs:dev
 
 開発環境を立ち上げたまま、README.md を書き換えると反映されます。  
 
-## VuePress のビルド
+## VuePress のビルド  
 下記コマンドを実行すると、`src/.vuepress/dist` に静的ファイルが生成される。  
 ```
 $ yarn src:dev
@@ -91,6 +92,7 @@ config ファイルを追加する。
 ```
 # .vuepress/ ディレクトリがない場合は作成
 $ mkdir src/.vuepress/
+
 # src/.vuepress/config.js を追加
 $ touch src/.vuepress/config.js
 ```
@@ -113,6 +115,16 @@ module.exports = {
 
 
 # GitHub Pages の公開  
+## GitHub Pages の公開方法  
+GitHub Pages を公開するには、GitHub リポジトリの `Settings > GitHub Pages` にて設定します。  
+`Source` の項目にて、公開するソースを選択します。  
+1. master branch: master ブランチのルート以下を全て公開  
+2. master branch /docs folder: master ブランチの `/docs` 以下を公開  
+3. None: GitHub Pages の公開を無効化  
+
+今回は `docs` 以下を公開するので、2を選択する。  
+
+
 ## docs/ 公開  
 
 # Circle CI でビルド、デプロイ  
