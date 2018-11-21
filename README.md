@@ -83,11 +83,11 @@ $ yarn docs:dev
 ## VuePress のビルド  
 下記コマンドを実行すると、`src/.vuepress/dist` に静的ファイルが生成される。  
 ```
-$ yarn src:dev
+$ yarn src:build
 ```
 
 ## `.vuepress/config.js` の追加  
-静的ファイルの出力先、ページタイトルなどの変更を行いたいので、  
+静的ファイルの生成先、ページタイトルなどの変更を行いたいので、  
 config ファイルを追加する。  
 ```
 # .vuepress/ ディレクトリがない場合は作成
@@ -115,7 +115,7 @@ module.exports = {
 
 
 # GitHub Pages の公開  
-## GitHub Pages の公開方法  
+## docs/ 公開  
 GitHub Pages を公開するには、GitHub リポジトリの `Settings > GitHub Pages` にて設定します。  
 `Source` の項目にて、公開するソースを選択します。  
 1. master branch: master ブランチのルート以下を全て公開  
@@ -124,7 +124,7 @@ GitHub Pages を公開するには、GitHub リポジトリの `Settings > GitHu
 
 今回は `docs` 以下を公開するので、2を選択する。  
 
-
-## docs/ 公開  
+`$ yarn src:build` でビルドした結果を master branch に commit, push すると GitHub Pages にページが公開される。  
+- https://y4shiro.github.io/vue-press/  
 
 # Circle CI でビルド、デプロイ  
