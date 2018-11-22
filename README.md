@@ -129,6 +129,7 @@ GitHub Pages を公開するには、GitHub リポジトリの `Settings > GitHu
 # Circle CI でビルド、デプロイ  
 手動で build, commit, push をするのは手間がかかるので自動化します。  
 事前に Circle CI のアカウントを取得しておきます。  
+[CircleCI](https://circleci.com/)
 
 ## Circle CI と GitHub リポジトリの連携  
 ## `.circleci/config.yml` の作成  
