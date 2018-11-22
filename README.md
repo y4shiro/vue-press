@@ -127,11 +127,20 @@ GitHub Pages を公開するには、GitHub リポジトリの `Settings > GitHu
 - https://y4shiro.github.io/vue-press/  
 
 # Circle CI でビルド、デプロイ  
-手動で build, commit, push をするのは手間がかかるので自動化します。  
-事前に Circle CI のアカウントを取得しておきます。  
-[CircleCI](https://circleci.com/)
+手動で build, commit, push をするのは手間がかかるので、  
+CircleCI を導入して自動化します。  
+
+## Circle CI サインアップ  
+Circle CI のアカウントを取得します。  
+[CircleCI](https://circleci.com/)  
+  
+GitHub アカウントでサインアップを行えるので、  
+トップページの右上にある `Sign UP` から次へ進みます。  
+`Sign Up Now` のページにて、`Sign Up with GitHub` をクリックして GitHub アカウントでサインアップを行います。  
 
 ## Circle CI と GitHub リポジトリの連携  
+
+
 ## `.circleci/config.yml` の作成  
 ## Circle CI からのデプロイ用 Shell 作成  
 ## GitHub リポジトリに push して動くことを確認  
