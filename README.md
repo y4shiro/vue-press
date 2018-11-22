@@ -1,7 +1,7 @@
 # VuePress で静的ページを作成し、GitHub Pages に公開する  
 - VuePress 環境構築  
 - GitHub Pages の公開  
-- Circle CI でビルド/デプロイ  
+- CircleCI でビルド/デプロイ  
 
 までを行う  
 
@@ -126,22 +126,23 @@ GitHub Pages を公開するには、GitHub リポジトリの `Settings > GitHu
 `$ yarn src:build` でビルドした結果を master branch に commit, push すると GitHub Pages にページが公開される。  
 - https://y4shiro.github.io/vue-press/  
 
-# Circle CI でビルド、デプロイ  
+# CircleCI でビルド、デプロイ  
 手動で build, commit, push をするのは手間がかかるので、  
 CircleCI を導入して自動化します。  
 
-## Circle CI サインアップ  
-Circle CI のアカウントを取得します。  
+## CircleCI サインアップ  
+CircleCI のアカウントを取得します。  
 [CircleCI](https://circleci.com/)  
   
 GitHub アカウントでサインアップを行えるので、  
 トップページの右上にある `Sign UP` から次へ進みます。  
 `Sign Up Now` のページにて、`Sign Up with GitHub` をクリックして GitHub アカウントでサインアップを行います。  
 
-## Circle CI と GitHub リポジトリの連携  
+## CircleCI と GitHub リポジトリの連携  
+CircleCI と
 
 
 ## `.circleci/config.yml` の作成  
-## Circle CI からのデプロイ用 Shell 作成  
+## CircleCI からのデプロイ用 Shell 作成  
 ## GitHub リポジトリに push して動くことを確認  
 
