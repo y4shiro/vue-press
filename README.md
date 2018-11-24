@@ -147,5 +147,10 @@ CircleCI 実行時に読み込む config ファイルを作成/追加します�
 パスは `/.circleci/config.yml` です。  
 
 ## CircleCI からのデプロイ用 Shell 作成  
+CircleCI で build 後、GitHub へ自動デプロイを行うための Shell を作成します。  
+```Shell
+# Shell 書く
+```
+
 ## GitHub リポジトリに push して動くことを確認  
 
