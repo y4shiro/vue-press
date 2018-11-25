@@ -145,6 +145,50 @@ CircleCI と
 ## CircleCI 設定ファイルの作成  
 CircleCI 実行時に読み込む config ファイルを作成/追加します。  
 パスは `/.circleci/config.yml` です。  
+```yml
+version: 2
+
+jobs:
+  build:
+    working_directory: ~/github-pages-vuepress-example
+    docker:
+      - image: node:9.11
+        environment:
+          TZ: "/usr/share/zoneinfo/Asia/Tokyo"
+          LANG: ja_JP.UTF-8
+          LC_ALL: C.UTF-8
+          LANGUAGE: ja_JP.UTF-8
+          DEPLOY_BRANCH: master
+
+    steps:
+      - checkout
+
+      #### Node dependencies ####
+      - restore_cache:
+          keys:
+            - yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - yarn-packages-{{ .Branch }}
+            - yarn-packages-master
+            - yarn-packages-
+
+      - run:
+          name: Install Node dependencies
+          command: yarn install
+
+      - save_cache:
+          paths:
+            - node_moduels
+          key: yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
+      #### Node dependencies end ####
+
+      - run:
+          name: Deploy development branch to master
+          command: |
+            if [ "${CIRCLE_BRANCH}" = "${DEPLOY_BRANCH}" ]; then
+              chmod +x deploy.sh
+              ./deploy.sh
+            fi
+```
 
 ## CircleCI からのデプロイ用 Shell 作成  
 CircleCI で build 後、GitHub へ自動デプロイを行うための Shell を作成します。  
