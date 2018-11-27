@@ -167,26 +167,19 @@ jobs:
     steps:
       - checkout
 
-      #### Node dependencies ####
       - restore_cache:
           keys:
-            - yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
-            - yarn-packages-{{ .Branch }}
-            - yarn-packages-master
-            - yarn-packages-
+            - yarn-packages-{{ checksum "yarn.lock" }}
 
       - run:
-          name: Install Node dependencies
           command: yarn install
 
       - save_cache:
           paths:
             - node_moduels
-          key: yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
-      #### Node dependencies end ####
+          key: yarn-packages-{{ checksum "yarn.lock" }}
 
       - run:
-          name: Deploy development branch to master
           command: |
             if [ "${CIRCLE_BRANCH}" = "${DEPLOY_BRANCH}" ]; then
               chmod +x deploy.sh
@@ -197,12 +190,31 @@ jobs:
 ## CircleCI からのデプロイ用 Shell 作成  
 CircleCI で build 後、GitHub へ自動デプロイを行うための Shell を作成します。  
 ```Shell
-# Shell 書く
+#!/bin/bash -e
+
+# build
+yarn run --silent build
+
+# ビルド生成物の差分がない場合、デプロイせずに終了する
+if [ "$(git status --porcelain | wc -l | xargs)" -eq 0 ]; then
+  echo "Not exist deploying contents."
+  exit 0
+fi
+
+git config --global user.name "Circle CI"
+git config --global user.email "<>"
+git add -A
+git commit -m "[ci skip] Deploy by CI"
+
+git push -f $(git config --get remote.origin.url) master:master > /dev/null 2>&1
+
+echo "Deploy a site!"
 ```
 
 ## GitHub リポジトリに push して動くことを確認  
 上記作業が完了したら、GitHub リポジトリの Master ブランチに push して、  
 CircleCI でビルド/デプロイが行われることを確認してください。  
+--
 ![circleci_03](https://user-images.githubusercontent.com/14056951/49065324-0b4ac880-f261-11e8-8337-7141d5df106c.png)  
 
 # 所感など
