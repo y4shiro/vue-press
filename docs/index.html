@@ -3,15 +3,116 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>コンテンツ | GitHub Pages product by VuePress</title>
+    <title>VuePress で静的ページを作成し、GitHub Pages に公開する | GitHub Pages product by VuePress</title>
     <meta name="description" content="VuePress やっていき">
     
     
-    <link rel="preload" href="/vue-press/assets/css/0.styles.24a4803e.css" as="style"><link rel="preload" href="/vue-press/assets/js/app.619d15ec.js" as="script"><link rel="preload" href="/vue-press/assets/js/3.25b262d2.js" as="script"><link rel="prefetch" href="/vue-press/assets/js/2.30eef2e3.js"><link rel="prefetch" href="/vue-press/assets/js/4.280e492a.js"><link rel="prefetch" href="/vue-press/assets/js/5.6bf8999d.js">
+    <link rel="preload" href="/vue-press/assets/css/0.styles.24a4803e.css" as="style"><link rel="preload" href="/vue-press/assets/js/app.0f79bd13.js" as="script"><link rel="preload" href="/vue-press/assets/js/3.0c3f47d6.js" as="script"><link rel="prefetch" href="/vue-press/assets/js/2.30eef2e3.js"><link rel="prefetch" href="/vue-press/assets/js/4.280e492a.js"><link rel="prefetch" href="/vue-press/assets/js/5.6bf8999d.js">
     <link rel="stylesheet" href="/vue-press/assets/css/0.styles.24a4803e.css">
   </head>
   <body>
-    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vue-press/" class="home-link router-link-exact-active router-link-active"><!----> <span class="site-name">GitHub Pages product by VuePress</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><!---->  <!----> </div> <div class="page"> <div class="content"><h1 id="コンテンツ"><a href="#コンテンツ" aria-hidden="true" class="header-anchor">#</a> コンテンツ</h1> <p>テスト</p> <h1 id="デプロイテスト"><a href="#デプロイテスト" aria-hidden="true" class="header-anchor">#</a> デプロイテスト</h1> <p>デプロイ出来ましたか？</p></div> <div class="page-edit"><!----> <!----></div> <!----> </div> <!----></div></div>
-    <script src="/vue-press/assets/js/3.25b262d2.js" defer></script><script src="/vue-press/assets/js/app.619d15ec.js" defer></script>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vue-press/" class="home-link router-link-exact-active router-link-active"><!----> <span class="site-name">GitHub Pages product by VuePress</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><!---->  <!----> </div> <div class="page"> <div class="content"><h1 id="vuepress-で静的ページを作成し、github-pages-に公開する"><a href="#vuepress-で静的ページを作成し、github-pages-に公開する" aria-hidden="true" class="header-anchor">#</a> VuePress で静的ページを作成し、GitHub Pages に公開する</h1> <ul><li>VuePress 環境構築</li> <li>GitHub Pages の公開</li> <li>CircleCI でビルド/デプロイ</li></ul> <p>までを行う</p> <h1 id="開発環境"><a href="#開発環境" aria-hidden="true" class="header-anchor">#</a> 開発環境</h1> <ul><li>OS: macOS Sierra</li> <li>Node.js: v10.13.0</li> <li>npm: 6.4.1</li> <li>yarn: 1.12.1</li></ul> <h1 id="vuepress-環境構築"><a href="#vuepress-環境構築" aria-hidden="true" class="header-anchor">#</a> VuePress 環境構築</h1> <p>VuePress 公式ドキュメントよると、</p> <ul><li><a href="https://vuepress.vuejs.org/guide/getting-started.html#global-installation" target="_blank" rel="noopener noreferrer">グローバルにインストールする方法<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://vuepress.vuejs.org/guide/getting-started.html#inside-an-existing-project" target="_blank" rel="noopener noreferrer">既存プロジェクトにインストールする方法<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul> <p>の2通りの方法が用意されている。</p> <p>今回は <code>$ yarn init</code> でプロジェクトを作成し VuePress を導入する。</p> <h2 id="git-リポジトリを作成"><a href="#git-リポジトリを作成" aria-hidden="true" class="header-anchor">#</a> Git リポジトリを作成</h2> <p>GitHub でリポジトリを作成して <code>$ git clone</code></p> <p>ローカルで作成する場合は</p> <div class="language- extra-class"><pre class="language-text"><code>$ mkdir vue-press
+$ cd vue-press
+$ git init
+</code></pre></div><h2 id="npm-プロジェクトを新規作成"><a href="#npm-プロジェクトを新規作成" aria-hidden="true" class="header-anchor">#</a> npm プロジェクトを新規作成</h2> <div class="language- extra-class"><pre class="language-text"><code>$ yarn init
+yarn init v1.12.1
+question name (vuepress):
+question version (1.0.0):
+question description:
+question entry point (index.js):
+question repository url:
+question author (y4shiro &lt;y4shironao@gmail.com&gt;):
+question license (MIT):
+question private:
+success Saved package.json
+✨  Done in 8.99s.
+</code></pre></div><h2 id="vuepress-を-yarn-でインストール"><a href="#vuepress-を-yarn-でインストール" aria-hidden="true" class="header-anchor">#</a> VuePress を yarn でインストール</h2> <p>VuePress を下記コマンドでインストールします。</p> <div class="language- extra-class"><pre class="language-text"><code>$ yarn add - D vuepress
+</code></pre></div><p><code>src/</code> ディレクトリを作成し、README.md を置く。<br>
+公式ドキュメントでは <code>docs/</code> を推奨しているが、<br>
+後に作成する GitHub Pages の公開ディレクトリと競合するため、<br> <code>docs/</code> 以外の名前でディレクトリ作成する。</p> <div class="language- extra-class"><pre class="language-text"><code>$ mkdir src
+$ echo '# Hello VuePress' &gt; src/README.md
+</code></pre></div><p><code>package.json</code> に vuepress 用のコマンドを追記する。</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;scripts&quot;: {
+    &quot;src:dev&quot;: &quot;vuepress dev src&quot;,
+    &quot;src:build&quot;: &quot;vuepress build src&quot;
+  }
+}
+</code></pre></div><h2 id="vuepress-の開発環境を起動する"><a href="#vuepress-の開発環境を起動する" aria-hidden="true" class="header-anchor">#</a> VuePress の開発環境を起動する</h2> <p>下記コマンドを実行すると開発環境が立ち上がるので、<br>
+表示された localhost のアドレスにアクセスして確認する。</p> <div class="language- extra-class"><pre class="language-text"><code>$ yarn docs:dev
+</code></pre></div><p>開発環境を立ち上げたまま、README.md を書き換えると反映されます。</p> <h2 id="vuepress-のビルド"><a href="#vuepress-のビルド" aria-hidden="true" class="header-anchor">#</a> VuePress のビルド</h2> <p>下記コマンドを実行すると、<code>src/.vuepress/dist</code> に静的ファイルが生成される。</p> <div class="language- extra-class"><pre class="language-text"><code>$ yarn src:build
+</code></pre></div><h2 id="vuepress-config-js-の追加"><a href="#vuepress-config-js-の追加" aria-hidden="true" class="header-anchor">#</a> <code>.vuepress/config.js</code> の追加</h2> <p>静的ファイルの生成先、ページタイトルなどの変更を行いたいので、<br>
+config ファイルを追加する。</p> <div class="language- extra-class"><pre class="language-text"><code># .vuepress/ ディレクトリがない場合は作成
+$ mkdir src/.vuepress/
+
+# src/.vuepress/config.js を追加
+$ touch src/.vuepress/config.js
+</code></pre></div><p><code>.vuepress/config.jp</code> に設定追加<br>
+下記設定の場合、</p> <ul><li>title: 公開ページのタイトル</li> <li>description: ページ説明</li> <li>dest: build 時の出力先指定</li> <li>base: GitHub Pages の公開ディレクトリパス</li></ul> <div class="language- extra-class"><pre class="language-text"><code>module.exports = {
+  title: 'GitHub Pages product by VuePress',
+  description: 'VuePress やっていき',
+  dest: 'docs/',
+  base: '/vue-press/',
+}
+</code></pre></div><h1 id="github-pages-の公開"><a href="#github-pages-の公開" aria-hidden="true" class="header-anchor">#</a> GitHub Pages の公開</h1> <h2 id="docs-公開"><a href="#docs-公開" aria-hidden="true" class="header-anchor">#</a> <code>docs/</code> 公開</h2> <p>GitHub Pages を公開するには、GitHub リポジトリの <code>Settings &gt; GitHub Pages</code> にて設定します。<br> <code>Source</code> の項目にて、公開するソースを選択します。</p> <ol><li>master branch: master ブランチのルート以下を全て公開</li> <li>master branch /docs folder: master ブランチの <code>/docs</code> 以下を公開</li> <li>None: GitHub Pages の公開を無効化</li></ol> <p>今回は <code>docs</code> 以下を公開するので、2を選択する。</p> <p><code>$ yarn src:build</code> でビルドした結果を master branch に commit, push すると GitHub Pages にページが公開される。</p> <ul><li>https://y4shiro.github.io/vue-press/</li></ul> <h1 id="circleci-でビルド、デプロイ"><a href="#circleci-でビルド、デプロイ" aria-hidden="true" class="header-anchor">#</a> CircleCI でビルド、デプロイ</h1> <p>手動で build, commit, push をするのは手間がかかるので、<br>
+CircleCI を導入して自動化します。</p> <h2 id="circleci-サインアップ"><a href="#circleci-サインアップ" aria-hidden="true" class="header-anchor">#</a> CircleCI サインアップ</h2> <p>CircleCI のアカウントを取得します。<br> <a href="https://circleci.com/" target="_blank" rel="noopener noreferrer">CircleCI<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p>GitHub アカウントでサインアップを行えるので、<br>
+トップページの右上にある <code>Sign UP</code> から次へ進みます。<br> <img src="https://user-images.githubusercontent.com/14056951/49064462-5ca58880-f25e-11e8-9cae-8328e1045840.png" alt="circleci_00"></p> <p><code>Sign Up Now</code> のページにて、<code>Sign Up with GitHub</code> をクリックして GitHub アカウントでサインアップを行います。<br> <img src="https://user-images.githubusercontent.com/14056951/49064489-6dee9500-f25e-11e8-90b0-0dd956863d10.png" alt="circleci_01"></p> <h2 id="circleci-と-github-リポジトリの連携"><a href="#circleci-と-github-リポジトリの連携" aria-hidden="true" class="header-anchor">#</a> CircleCI と GitHub リポジトリの連携</h2> <p>CircleCI のサイドメニューより <code>ADD PROJECT</code> のページへ進み、<br>
+任意のリポジトリを選択してください。<br> <img src="https://user-images.githubusercontent.com/14056951/49064760-4946ed00-f25f-11e8-9a14-0b222974bf98.png" alt="circleci_02"></p> <h2 id="circleci-設定ファイルの作成"><a href="#circleci-設定ファイルの作成" aria-hidden="true" class="header-anchor">#</a> CircleCI 設定ファイルの作成</h2> <p>CircleCI 実行時に読み込む config ファイルを作成/追加します。<br>
+パスは <code>/.circleci/config.yml</code> です。<br>
+キャッシュ周りは下記参考</p> <ul><li>https://circleci.com/docs/2.0/yarn/#section=deployment</li> <li>https://circleci.com/docs/2.0/caching/#npm-node--</li></ul> <div class="language-yml extra-class"><pre class="language-text"><code>version: 2
+
+jobs:
+  build:
+    working_directory: ~/tmp
+    docker:
+      - image: node:9.11
+        environment:
+          TZ: &quot;/usr/share/zoneinfo/Asia/Tokyo&quot;
+          DEPLOY_BRANCH: master
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - yarn-packages-{{ .Branch }}-{{ checksum &quot;yarn.lock&quot; }}
+            - yarn-packages-{{ .Branch }}
+            - yarn-packages-
+
+      - run:
+          command: yarn install
+
+      - save_cache:
+          paths:
+            - node_moduels
+          key: yarn-packages-{{ .Branch }}-{{ checksum &quot;yarn.lock&quot; }}
+
+      - run:
+          command: |
+            if [ &quot;${CIRCLE_BRANCH}&quot; = &quot;${DEPLOY_BRANCH}&quot; ]; then
+              chmod +x deploy.sh
+              ./deploy.sh
+            fi
+</code></pre></div><h2 id="circleci-からのデプロイ用-shell-作成"><a href="#circleci-からのデプロイ用-shell-作成" aria-hidden="true" class="header-anchor">#</a> CircleCI からのデプロイ用 Shell 作成</h2> <p>CircleCI で build 後、GitHub へ自動デプロイを行うための Shell を作成します。</p> <div class="language-Shell extra-class"><pre class="language-text"><code>#!/bin/bash -e
+
+# build
+yarn run --silent build
+
+# ビルド生成物の差分がない場合、デプロイせずに終了する
+if [ &quot;$(git status --porcelain | wc -l | xargs)&quot; -eq 0 ]; then
+  echo &quot;Not exist deploying contents.&quot;
+  exit 0
+fi
+
+git config --global user.name &quot;Circle CI&quot;
+git config --global user.email &quot;&lt;&gt;&quot;
+git add -A
+git commit -m &quot;[ci skip] Deploy by CI&quot;
+
+git push -f $(git config --get remote.origin.url) master:master &gt; /dev/null 2&gt;&amp;1
+
+echo &quot;Deploy completed.&quot;
+</code></pre></div><h2 id="github-リポジトリに-push-して動くことを確認"><a href="#github-リポジトリに-push-して動くことを確認" aria-hidden="true" class="header-anchor">#</a> GitHub リポジトリに push して動くことを確認</h2> <p>上記作業が完了したら、GitHub リポジトリの Master ブランチに push して、<br>
+CircleCI でビルド/デプロイが行われることを確認してください。</p> <p><img src="https://user-images.githubusercontent.com/14056951/49065324-0b4ac880-f261-11e8-8337-7141d5df106c.png" alt="circleci_03"></p></div> <div class="page-edit"><!----> <!----></div> <!----> </div> <!----></div></div>
+    <script src="/vue-press/assets/js/3.0c3f47d6.js" defer></script><script src="/vue-press/assets/js/app.0f79bd13.js" defer></script>
   </body>
 </html>
