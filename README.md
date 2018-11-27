@@ -138,9 +138,9 @@ GitHub アカウントでサインアップを行えるので、
 トップページの右上にある `Sign UP` から次へ進みます。  
 `Sign Up Now` のページにて、`Sign Up with GitHub` をクリックして GitHub アカウントでサインアップを行います。  
 
-## CircleCI と GitHub リポジトリの連携  
-CircleCI と
-
+## CircleCI と GitHub プロジェクトの連携  
+CircleCI のサイドメニューより `ADD PROJECT` のページへ進み、  
+任意のプロジェクトを選択してください。  
 
 ## CircleCI 設定ファイルの作成  
 CircleCI 実行時に読み込む config ファイルを作成/追加します。  
