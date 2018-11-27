@@ -114,7 +114,7 @@ module.exports = {
 ```
 
 # GitHub Pages の公開  
-## docs/ 公開  
+## `docs/` 公開  
 GitHub Pages を公開するには、GitHub リポジトリの `Settings > GitHub Pages` にて設定します。  
 `Source` の項目にて、公開するソースを選択します。  
 1. master branch: master ブランチのルート以下を全て公開  
