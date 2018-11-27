@@ -212,15 +212,13 @@ git commit -m "[ci skip] Deploy by CI"
 
 git push -f $(git config --get remote.origin.url) master:master > /dev/null 2>&1
 
-echo "Deploy a site!"
+echo "Deploy completed."
 ```
 
 ## GitHub リポジトリに push して動くことを確認  
+
 上記作業が完了したら、GitHub リポジトリの Master ブランチに push して、  
 CircleCI でビルド/デプロイが行われることを確認してください。  
---
+
 ![circleci_03](https://user-images.githubusercontent.com/14056951/49065324-0b4ac880-f261-11e8-8337-7141d5df106c.png)  
-
-# 所感など
-
 
