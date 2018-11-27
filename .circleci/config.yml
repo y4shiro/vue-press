@@ -7,9 +7,6 @@ jobs:
       - image: node:9.11
         environment:
           TZ: "/usr/share/zoneinfo/Asia/Tokyo"
-          LANG: ja_JP.UTF-8
-          LC_ALL: C.UTF-8
-          LANGUAGE: ja_JP.UTF-8
           DEPLOY_BRANCH: master
 
     steps:
@@ -17,7 +14,9 @@ jobs:
 
       - restore_cache:
           keys:
-            - yarn-packages-{{ checksum "yarn.lock" }}
+            - yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - yarn-packages-{{ .Branch }}
+            - yarn-packages-
 
       - run:
           command: yarn install
@@ -25,7 +24,7 @@ jobs:
       - save_cache:
           paths:
             - node_moduels
-          key: yarn-packages-{{ checksum "yarn.lock" }}
+          key: yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
 
       - run:
           command: |

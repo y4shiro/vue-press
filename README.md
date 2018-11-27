@@ -149,6 +149,9 @@ CircleCI のサイドメニューより `ADD PROJECT` のページへ進み、
 ## CircleCI 設定ファイルの作成  
 CircleCI 実行時に読み込む config ファイルを作成/追加します。  
 パスは `/.circleci/config.yml` です。  
+キャッシュ周りは下記参考  
+- https://circleci.com/docs/2.0/yarn/#section=deployment  
+- https://circleci.com/docs/2.0/caching/#npm-node--
 
 ```yml
 version: 2
@@ -160,9 +163,6 @@ jobs:
       - image: node:9.11
         environment:
           TZ: "/usr/share/zoneinfo/Asia/Tokyo"
-          LANG: ja_JP.UTF-8
-          LC_ALL: C.UTF-8
-          LANGUAGE: ja_JP.UTF-8
           DEPLOY_BRANCH: master
 
     steps:
@@ -170,7 +170,9 @@ jobs:
 
       - restore_cache:
           keys:
-            - yarn-packages-{{ checksum "yarn.lock" }}
+            - yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - yarn-packages-{{ .Branch }}
+            - yarn-packages-
 
       - run:
           command: yarn install
@@ -178,7 +180,7 @@ jobs:
       - save_cache:
           paths:
             - node_moduels
-          key: yarn-packages-{{ checksum "yarn.lock" }}
+          key: yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
 
       - run:
           command: |
@@ -190,6 +192,7 @@ jobs:
 
 ## CircleCI からのデプロイ用 Shell 作成  
 CircleCI で build 後、GitHub へ自動デプロイを行うための Shell を作成します。  
+
 ```Shell
 #!/bin/bash -e
 
