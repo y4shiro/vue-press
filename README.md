@@ -136,15 +136,15 @@ CircleCI のアカウントを取得します。
   
 GitHub アカウントでサインアップを行えるので、  
 トップページの右上にある `Sign UP` から次へ進みます。  
-![circleci_00](https://user-images.githubusercontent.com/14056951/49064462-5ca58880-f25e-11e8-9cae-8328e1045840.png)
+![circleci_00](https://user-images.githubusercontent.com/14056951/49064462-5ca58880-f25e-11e8-9cae-8328e1045840.png)  
 
 `Sign Up Now` のページにて、`Sign Up with GitHub` をクリックして GitHub アカウントでサインアップを行います。  
-![circleci_01](https://user-images.githubusercontent.com/14056951/49064489-6dee9500-f25e-11e8-90b0-0dd956863d10.png)
-
+![circleci_01](https://user-images.githubusercontent.com/14056951/49064489-6dee9500-f25e-11e8-90b0-0dd956863d10.png)  
 
 ## CircleCI と GitHub プロジェクトの連携  
 CircleCI のサイドメニューより `ADD PROJECT` のページへ進み、  
 任意のプロジェクトを選択してください。  
+![circleci_02](https://user-images.githubusercontent.com/14056951/49064760-4946ed00-f25f-11e8-9a14-0b222974bf98.png)  
 
 ## CircleCI 設定ファイルの作成  
 CircleCI 実行時に読み込む config ファイルを作成/追加します。  
