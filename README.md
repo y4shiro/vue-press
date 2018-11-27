@@ -149,6 +149,7 @@ CircleCI のサイドメニューより `ADD PROJECT` のページへ進み、
 ## CircleCI 設定ファイルの作成  
 CircleCI 実行時に読み込む config ファイルを作成/追加します。  
 パスは `/.circleci/config.yml` です。  
+
 ```yml
 version: 2
 
