@@ -141,9 +141,9 @@ GitHub アカウントでサインアップを行えるので、
 `Sign Up Now` のページにて、`Sign Up with GitHub` をクリックして GitHub アカウントでサインアップを行います。  
 ![circleci_01](https://user-images.githubusercontent.com/14056951/49064489-6dee9500-f25e-11e8-90b0-0dd956863d10.png)  
 
-## CircleCI と GitHub プロジェクトの連携  
+## CircleCI と GitHub リポジトリの連携  
 CircleCI のサイドメニューより `ADD PROJECT` のページへ進み、  
-任意のプロジェクトを選択してください。  
+任意のリポジトリを選択してください。  
 ![circleci_02](https://user-images.githubusercontent.com/14056951/49064760-4946ed00-f25f-11e8-9a14-0b222974bf98.png)  
 
 ## CircleCI 設定ファイルの作成  
@@ -201,4 +201,9 @@ CircleCI で build 後、GitHub へ自動デプロイを行うための Shell �
 ```
 
 ## GitHub リポジトリに push して動くことを確認  
+上記作業が完了したら、GitHub リポジトリの Master ブランチに push して、  
+CircleCI でビルド/デプロイが行われることを確認してください。  
+
+# 所感など
+
 
