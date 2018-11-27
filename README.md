@@ -136,7 +136,11 @@ CircleCI のアカウントを取得します。
   
 GitHub アカウントでサインアップを行えるので、  
 トップページの右上にある `Sign UP` から次へ進みます。  
+![circleci_00](https://user-images.githubusercontent.com/14056951/49064217-87dba800-f25d-11e8-9b10-a10fa89c6961.png)  
+
 `Sign Up Now` のページにて、`Sign Up with GitHub` をクリックして GitHub アカウントでサインアップを行います。  
+![circleci_01](https://user-images.githubusercontent.com/14056951/49064280-cb361680-f25d-11e8-967d-4cf08372bcce.png)  
+
 
 ## CircleCI と GitHub プロジェクトの連携  
 CircleCI のサイドメニューより `ADD PROJECT` のページへ進み、  
@@ -150,7 +154,7 @@ version: 2
 
 jobs:
   build:
-    working_directory: ~/github-pages-vuepress-example
+    working_directory: ~/tmp
     docker:
       - image: node:9.11
         environment:
