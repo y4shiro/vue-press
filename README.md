@@ -50,15 +50,15 @@ $ yarn add - D vuepress
 ```
 
 `src/` ディレクトリを作成し、README.md を設置します。  
-[公式ドキュメント](https://vuepress.vuejs.org/guide/getting-started.html#inside-an-existing-project)では `docs/` を作成していますが、  
-後に作成する GitHub Pages の公開ディレクトリと競合するため、  
+  
+[公式ドキュメント](https://vuepress.vuejs.org/guide/getting-started.html#inside-an-existing-project)では `docs/` を作成していますが、後に作成する GitHub Pages の公開ディレクトリと競合するため、  
 `docs/` 以外の名前でディレクトリ作成します。  
 ```
 $ mkdir src
 $ echo '# Hello VuePress' > src/README.md
 ```
 
-`package.json` に vuepress 用のコマンドを追記します。  
+`package.json` に VuePress 用のコマンドを追記します。  
 ```
 "scripts": {
   "src:dev": "vuepress dev src",
