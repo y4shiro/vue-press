@@ -75,7 +75,7 @@ $ echo '# Hello VuePress' > src/README.md
 下記コマンドを実行すると開発環境が立ち上がるので、  
 表示された localhost のアドレスにアクセスして確認する。  
 ```
-$ yarn docs:dev
+$ yarn src:dev
 ```
 
 開発環境を立ち上げたまま、README.md を書き換えると反映されます。  
