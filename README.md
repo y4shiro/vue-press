@@ -3,7 +3,7 @@
 - GitHub Pages の公開  
 - CircleCI でビルド/デプロイ  
 
-までを行う  
+までを行う行います。  
 
 # 開発環境  
 - OS: macOS Sierra  
@@ -16,14 +16,11 @@ VuePress 公式ドキュメントよると、
 - [グローバルにインストールする方法](https://vuepress.vuejs.org/guide/getting-started.html#global-installation)  
 - [既存プロジェクトにインストールする方法](https://vuepress.vuejs.org/guide/getting-started.html#inside-an-existing-project)  
 
-の2通りの方法が用意されている。  
-  
-今回は `$ yarn init` でプロジェクトを作成し VuePress を導入する。  
+の2通りの方法が用意されています。  
+今回は後者の方法し、`$ yarn init` でプロジェクト作成後に VuePress を導入します。  
 
-## Git リポジトリを作成  
-GitHub でリポジトリを作成して `$ git clone`  
-  
-ローカルで作成する場合は  
+## ディレクトリを作成  
+ローカルに作業ディレクトリを作成します。  
 ```
 $ mkdir vue-press
 $ cd vue-press
@@ -52,44 +49,42 @@ VuePress を下記コマンドでインストールします。
 $ yarn add - D vuepress
 ```
 
-`src/` ディレクトリを作成し、README.md を置く。  
-[公式ドキュメント](https://vuepress.vuejs.org/guide/getting-started.html#inside-an-existing-project)では `docs/` を推奨しているが、  
+`src/` ディレクトリを作成し、README.md を設置します。  
+[公式ドキュメント](https://vuepress.vuejs.org/guide/getting-started.html#inside-an-existing-project)では `docs/` を作成していますが、  
 後に作成する GitHub Pages の公開ディレクトリと競合するため、  
-`docs/` 以外の名前でディレクトリ作成する。  
+`docs/` 以外の名前でディレクトリ作成します。  
 ```
 $ mkdir src
 $ echo '# Hello VuePress' > src/README.md
 ```
 
-`package.json` に vuepress 用のコマンドを追記する。  
+`package.json` に vuepress 用のコマンドを追記します。  
 ```
-{
-  "scripts": {
-    "src:dev": "vuepress dev src",
-    "src:build": "vuepress build src"
-  }
+"scripts": {
+  "src:dev": "vuepress dev src",
+  "src:build": "vuepress build src"
 },
 ```
 
 ## VuePress の開発環境を起動する  
 下記コマンドを実行すると開発環境が立ち上がるので、  
-表示された localhost のアドレスにアクセスして確認する。  
+表示された localhost のアドレスにアクセスして確認します。  
+開発環境を立ち上げたまま、README.md を書き換えるとリアルタイムで反映されます。  
 ```
 $ yarn src:dev
 ```
 ![vuepress00](https://user-images.githubusercontent.com/14056951/50330427-7fb21800-053e-11e9-9027-90c86a9d044c.png)
 
-開発環境を立ち上げたまま、README.md を書き換えると反映されます。  
 
 ## VuePress のビルド  
-下記コマンドを実行すると、`src/.vuepress/dist` に静的ファイルが生成される。  
+下記コマンドを実行すると、`src/.vuepress/dist` に静的ファイルが生成されます。  
 ```
 $ yarn src:build
 ```
 
 ## `.vuepress/config.js` の追加  
 静的ファイルの生成先、ページタイトルなどの変更を行いたいので、  
-config ファイルを追加する。  
+config ファイルを追加します。  
 ```
 # .vuepress/ ディレクトリがない場合は作成
 $ mkdir src/.vuepress/
@@ -98,8 +93,8 @@ $ mkdir src/.vuepress/
 $ touch src/.vuepress/config.js
 ```
 
-`.vuepress/config.jp` に設定追加  
-下記設定の場合、  
+`.vuepress/config.js` に設定追加  
+下記設定を追加します。  
 - title: 公開ページのタイトル
 - description: ページ説明
 - dest: build 時の出力先指定
@@ -122,14 +117,13 @@ GitHub Pages を公開するには、GitHub リポジトリの `Settings > GitHu
 2. master branch /docs folder: master ブランチの `/docs` 以下を公開  
 3. None: GitHub Pages の公開を無効化  
 
-今回は `docs` 以下を公開するので、2を選択する。  
+今回は `docs` 以下を公開するので、2を選択します。  
 
-`$ yarn src:build` でビルドした結果を master branch に commit, push すると GitHub Pages にページが公開される。  
+`$ yarn src:build` でビルドした結果を master branch に commit, push すると GitHub Pages にページが公開されます。  
 - https://y4shiro.github.io/vue-press/  
 
 # CircleCI でビルド、デプロイ  
-手動で build, commit, push をするのは手間がかかるので、  
-CircleCI を導入して自動化します。  
+手動で build, commit, push をするのは手間がかかるので、CircleCI を導入して自動化します。  
 
 ## CircleCI サインアップ  
 CircleCI のアカウントを取得します。  
