@@ -77,6 +77,7 @@ $ echo '# Hello VuePress' > src/README.md
 ```
 $ yarn src:dev
 ```
+![vuepress00](https://user-images.githubusercontent.com/14056951/50330427-7fb21800-053e-11e9-9027-90c86a9d044c.png)
 
 開発環境を立ち上げたまま、README.md を書き換えると反映されます。  
 
