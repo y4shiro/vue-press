@@ -53,7 +53,7 @@ $ yarn add - D vuepress
 ```
 
 `src/` ディレクトリを作成し、README.md を置く。  
-公式ドキュメントでは `docs/` を推奨しているが、  
+[公式ドキュメント](https://vuepress.vuejs.org/guide/getting-started.html#inside-an-existing-project)では `docs/` を推奨しているが、  
 後に作成する GitHub Pages の公開ディレクトリと競合するため、  
 `docs/` 以外の名前でディレクトリ作成する。  
 ```
