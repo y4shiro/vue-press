@@ -68,7 +68,7 @@ $ echo '# Hello VuePress' > src/README.md
     "src:dev": "vuepress dev src",
     "src:build": "vuepress build src"
   }
-}
+},
 ```
 
 ## VuePress の開発環境を起動する  
