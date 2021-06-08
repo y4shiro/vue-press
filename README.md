@@ -46,7 +46,7 @@ success Saved package.json
 ## VuePress を yarn でインストール  
 VuePress を下記コマンドでインストールします。  
 ```
-$ yarn add - D vuepress
+$ yarn add -D vuepress
 ```
 
 `src/` ディレクトリを作成し、README.md を設置します。  
